@@ -1,0 +1,2 @@
+data/ml_models/NbMoTaW.txt filter=lfs diff=lfs merge=lfs -text
+lp_files/**/*.lp filter=lfs diff=lfs merge=lfs -text

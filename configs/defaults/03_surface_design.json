@@ -1,0 +1,56 @@
+{
+  "material": {
+    "element": "Pt",
+    "inter_atomic_distance": 2.828427
+  },
+  "geometry": {
+    "atoms_on_edge": 4,
+    "n_layers": 6,
+    "fixed_bottom_layers": 2,
+    "lattice": {
+      "a": [1.0, 0.0, 0.0],
+      "b": [0.5, 0.8660254037844386, 0.0],
+      "c": [0.5, 0.28867513459481287, 0.8164965809277261]
+    },
+    "parallelepiped": {
+      "alpha": 1.5707963267948966,
+      "beta": 1.5707963267948966,
+      "gamma": 1.0471975511965976,
+      "shift_factor": -0.01
+    },
+    "layer_spacing_multipliers": {
+      "bottom_layers": 1.5,
+      "top_layer": 1.5
+    }
+  },
+  "optimization": {
+    "target_gcn": 8.0,
+    "catalyst_weight": 1.0,
+    "solver": "cplex",
+    "time_limit": 360,
+    "mip_gap": null,
+    "maximize_sense": -1
+  },
+  "energy_parameters": {
+    "surface_CN_bounds": [3, 9],
+    "undefected_surface_energy": 0.129758,
+    "max_surface_energy": 999,
+    "E_i_values": [0, 0.28613, -0.01438, -0.051521, 0],
+    "E_i_breakpoints": [0, 3, 10, 11, 12],
+    "gcni_bounds": [0, 12],
+    "gcni_normalization": 12,
+    "esurf_offset": 0.101208,
+    "stability_normalization_sign": -1,
+    "stability_offset": 1
+  },
+  "numerical": {
+    "double_tolerance": 1e-6
+  },
+  "constraint_parameters": {
+    "yi_fixed_value": 1
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "03_surface_design"
+  }
+}

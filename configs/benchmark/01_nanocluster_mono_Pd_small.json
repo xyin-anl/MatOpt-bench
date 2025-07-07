@@ -1,0 +1,36 @@
+{
+  "material": {
+    "element": "Pd",
+    "inter_atomic_distance": 2.75,
+    "cohesive_energy": -3.89
+  },
+  "geometry": {
+    "cluster_size": 12,
+    "n_shells": 1,
+    "initial_location": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit": 60,
+    "mip_gap": null,
+    "maximize_sense": -1
+  },
+  "energy_parameters": {
+    "coordination_bounds": [
+      0,
+      12
+    ],
+    "piecewise_points": 12,
+    "energy_model": "square_root_coordination",
+    "cnri_lower_bound": 0,
+    "ecoh_normalization_factor": 1.0
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "01_nanocluster_mono"
+  }
+}

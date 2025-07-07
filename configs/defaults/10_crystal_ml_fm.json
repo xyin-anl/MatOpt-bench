@@ -1,0 +1,43 @@
+{
+  "data": {
+    "pt_filename": "Ca4S4.pt",
+    "data_directory": "data/ml_models"
+  },
+  "model": {
+    "device": "cpu",
+    "crysim_constants": {
+      "wp_precision": 300,
+      "crystal_system_bits": 7,
+      "max_spg": 120
+    },
+    "search_ranges": {
+      "split_numbers": [3, 61],
+      "n_atoms": [1, 101]
+    },
+    "atom_on_type": "H"
+  },
+  "optimization": {
+    "time_limit": 3600,
+    "solver": "cplex",
+    "minimize_sense": 1
+  },
+  "numerical": {
+    "coefficient_threshold": 1e-12
+  },
+  "geometry": {
+    "coordinate_template": [0, 0]
+  },
+  "constraint_parameters": {
+    "one_hot_bounds": [1, 1],
+    "one_hot_coefficient": 1.0
+  },
+  "energy_parameters": {
+    "linear_coefficients": [1.0, 1.0]
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "10_crystal_ml_fm",
+    "lp_filename": "crystal_ml_fm.lp"
+  }
+}

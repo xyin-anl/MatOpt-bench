@@ -1,0 +1,160 @@
+{
+  "materials": {
+    "iad_multiplier": 2,
+    "lattice_type": "FCC111",
+    "atoms": [
+      "Ni",
+      "Pt"
+    ],
+    "canvas_atom": "Pt"
+  },
+  "geometry": {
+    "n_unit_cells_on_edge": 8,
+    "n_layers": 3,
+    "alpha": 1.5707963267948966,
+    "beta": 1.5707963267948966,
+    "gamma": 1.0471975511965976,
+    "shift_factor": -0.01,
+    "fixed_pt_layers": 2.5,
+    "canvas_bottom_layers": 1.5
+  },
+  "motifs": {
+    "canvas_neighbors": 12,
+    "configurations": [
+      {
+        "ni_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          6,
+          7,
+          8,
+          3
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          7,
+          8,
+          3,
+          4
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "ni_indices": [
+          8,
+          3,
+          4,
+          5
+        ],
+        "pt_indices": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "type_a_confs": [
+      0
+    ],
+    "type_b_confs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "optimization": {
+    "cat_weight": 1.0,
+    "time_limit": 360,
+    "solver": "cplex",
+    "cat_norm_factor": 6.0
+  },
+  "energy_parameters": {
+    "undefected_surf_e": 0.129758,
+    "max_surf_e": 999,
+    "e_i_values": [
+      0,
+      0.28613,
+      -0.01438,
+      -0.051521,
+      0
+    ],
+    "e_i_breakpoints": [
+      0,
+      3,
+      10,
+      11,
+      12
+    ],
+    "energy_offset": 0.101208
+  },
+  "output": {
+    "lp_export": false,
+    "lp_filename": "04_surface_bifunctional_PtNi_small.lp",
+    "lp_export_dir": "lp_files"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "data": {
+    "structure_file": "data/clusters/Zr.json",
+    "property_file": "data/clusters/Zr.csv",
+    "prop_columns": {
+      "mixing_energy": "mixing",
+      "pband": ["pup", "pdown"],
+      "dband": ["dup", "ddown"],
+      "total_energy": null
+    },
+    "index_column": 0,
+    "structure_slice": ":"
+  },
+  "material": {
+    "allowed_cations": [
+      "Hf",
+      "V",
+      "Y",
+      "Ce",
+      "Fe",
+      "Co",
+      "Ru",
+      "Zr"
+    ],
+    "reference_energies": null,
+    "reference_structure_index": null,
+    "has_oxygen": true,
+    "oxygen_symbol": "O",
+    "atoms_per_cell": 72
+  },
+  "composition": {
+    "bounds": {
+      "Hf": [
+        1,
+        43
+      ],
+      "Y": [
+        1,
+        43
+      ],
+      "Ru": [
+        1,
+        43
+      ],
+      "Zr": [
+        1,
+        43
+      ],
+      "V": [
+        1,
+        21
+      ],
+      "Ce": [
+        1,
+        21
+      ],
+      "Fe": [
+        1,
+        21
+      ],
+      "Co": [
+        1,
+        21
+      ]
+    }
+  },
+  "cluster_expansion": {
+    "train_multiple_ce": true,
+    "cutoffs": {
+      "MixingEnergy": [
+        4,
+        8
+      ],
+      "pband": [
+        4
+      ],
+      "dband": [
+        12,
+        6
+      ]
+    },
+    "weights": {
+      "W1": 8000.0,
+      "W2": 1.0,
+      "pband": 0.0459798,
+      "dband": -0.097515
+    },
+    "evaluate_model": true,
+    "test_size": 0.2,
+    "cv_verbosity": 1
+  },
+  "optimization": {
+    "time_limit": 360,
+    "solver": "cplex",
+    "minimize_sense": 1
+  },
+  "model_training": {
+    "lasso_cv": 5,
+    "random_state": 42,
+    "n_jobs": 8
+  },
+  "numerical": {
+    "tolerance": 1e-15,
+    "zero_mixing_energy": 0.0
+  },
+  "constraint_parameters": {
+    "fixed_values": {
+      "occupied": 1.0,
+      "unoccupied": 0.0
+    }
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "08_alloy_cluster_expansion"
+  }
+}

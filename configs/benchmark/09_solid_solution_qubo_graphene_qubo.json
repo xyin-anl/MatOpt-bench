@@ -1,0 +1,49 @@
+{
+  "data": {
+    "structure_file": "data/solid_solution/AlN_108_Al_only.gui",
+    "qubo_path": "data/solid_solution/GaAlN_qubo.npy"
+  },
+  "material": {
+    "substitution": {
+      "base_element": "Al",
+      "sub_element": "Ga",
+      "allowed_sites": "cations",
+      "fixed_element": "N"
+    },
+    "special_cases": {
+      "Mo_confcount.gui": {
+        "replace_element": "Mo"
+      }
+    }
+  },
+  "optimization": {
+    "mode": "qubo",
+    "target_substitutions": 8,
+    "chemical_potential": 0.0,
+    "temperature": 298.15,
+    "solver": "cplex",
+    "time_limit": 360,
+    "verbose": true,
+    "minimize_sense": 1
+  },
+  "numerical": {
+    "quadratic_threshold": 1e-15,
+    "quadratic_multiplier": 2
+  },
+  "energy_parameters": {
+    "linear_coefficients": [
+      1.0,
+      1.0
+    ]
+  },
+  "constraint_parameters": {
+    "fixed_values": {
+      "occupied": 1.0,
+      "unoccupied": 0.0
+    }
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "09_solid_solution_qubo"
+  }
+}

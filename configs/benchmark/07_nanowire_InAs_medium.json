@@ -1,0 +1,58 @@
+{
+  "material": {
+    "iad": 3.7265,
+    "atom_type": "",
+    "elements": [
+      "In",
+      "As"
+    ],
+    "lattice_type": "wurtzite",
+    "inter_atomic_distance": 3.7265
+  },
+  "geometry": {
+    "orientation": "0001",
+    "n_atom_radius": 6,
+    "n_atom_unit_length": 2,
+    "size_unit_length": 216,
+    "core_ratio": 0.2,
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "shape_shift_factor": -0.001
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit": 480,
+    "maximize_sense": -1,
+    "mip_gap": null
+  },
+  "energy_parameters": {
+    "p": -0.22479870084561238,
+    "q": -0.9092660150083058,
+    "alpha": -0.3684513,
+    "cn_bounds": [
+      0,
+      4
+    ],
+    "ecoh_normalization_factor": 1.0
+  },
+  "constraint_parameters": {
+    "yi_fixed_value": 1
+  },
+  "numerical": {
+    "double_tolerance": 1e-06
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "07_nanowire_design",
+    "lp_filename": "nanowire_design.lp"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "material": {
+    "phase": "SrTiO",
+    "ions": {
+      "Sr": 1,
+      "Ti": 1,
+      "O": 3
+    }
+  },
+  "geometry": {
+    "grid": 4,
+    "cell": 3.9,
+    "group": "195",
+    "grid_step_divisor": 1.0
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit": 3600,
+    "minimize_sense": 1
+  },
+  "energy_parameters": {
+    "max_penalty": 300.0,
+    "ewald": {
+      "alpha_factor": 5.0,
+      "real_d": 3,
+      "recip_d": 3
+    },
+    "conversion_factors": {
+      "hartree_to_ev": 27.2114,
+      "nm_to_angstrom": 10.0
+    },
+    "energy_coefficients": [1.0, 1.0]
+  },
+  "constraint_parameters": {
+    "yi_fixed_value": 1.0
+  },
+  "data_paths": {
+    "base_directory": "data/ionic",
+    "grid_subdirectory": "grids",
+    "ewald_subdirectory": "Ewald",
+    "file_extensions": {
+      "orbit": ".json",
+      "grid_mapping": ".txt",
+      "ewald_matrix": ".npy"
+    },
+    "library_files": {
+      "radii": "radii.lib",
+      "buckingham": "buck.lib",
+      "distances": "dist.lib"
+    }
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "06_crystal_ionic"
+  }
+}

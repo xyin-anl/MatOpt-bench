@@ -1,0 +1,79 @@
+{
+  "material": {
+    "lattice_parameters": {
+      "a": 4.01,
+      "b": 4.01,
+      "c": 4.01
+    },
+    "atom_types": [
+      "Ba",
+      "Fe",
+      "In",
+      "O"
+    ],
+    "atoms": {
+      "a_site": "Ba",
+      "b_site_types": [
+        "Fe",
+        "In"
+      ],
+      "o_site": "O"
+    }
+  },
+  "geometry": {
+    "n_unit_cells_on_edge": 2,
+    "shift_vector": [
+      -0.01,
+      -0.01,
+      -0.01
+    ]
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit": 180,
+    "maximize_sense": -1,
+    "pct_local_lb": 0,
+    "pct_local_ub": 1,
+    "pct_global_lb": 0.0,
+    "pct_global_ub": 0.3
+  },
+  "configurations": {
+    "desired_conf_indices": [
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      68,
+      69,
+      70,
+      71,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169
+    ],
+    "data_directory": "data/bulk",
+    "zip_filename": "BaFeInO.zip",
+    "conf_subdirectory": "confs"
+  },
+  "constraint_parameters": {
+    "fixed_values": {
+      "occupied": 1,
+      "unoccupied": 0
+    }
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "05_bulk_oxide_vacancy",
+    "lp_filename": "bulk_oxide_vacancy.lp"
+  }
+}

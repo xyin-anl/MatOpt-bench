@@ -1,0 +1,52 @@
+{
+  "material": {
+    "elements": ["Nb", "Mo", "Ta", "W"],
+    "max_composition_ratio": 0.6,
+    "unit_sites": [[0, 0, 0], [0.5, 0.5, 0.5]],
+    "alat": 3.29
+  },
+  "geometry": {
+    "spc_size": [8, 8, 8]
+  },
+  "thermodynamics": {
+    "temperature": 300.0,
+    "physical_constants": {
+      "boltzmann_ev": 5.189e19,
+      "avogadro": 6.02e23
+    },
+    "entropy_factors": {
+      "linear_multiplier": 1.0,
+      "quadratic_multiplier": 2.0,
+      "species_factor": 0.5
+    }
+  },
+  "model": {
+    "model_txt": "NbMoTaW.txt",
+    "data_directory": "data/ml_models"
+  },
+  "optimization": {
+    "time_limit": 3600,
+    "solver": "cplex",
+    "minimize_sense": 1,
+    "composition_bounds": {
+      "lower": 1,
+      "upper_multiplier": 1.0
+    }
+  },
+  "numerical": {
+    "fm_threshold": 1e-12,
+    "entropy_threshold": 1e-10
+  },
+  "constraint_parameters": {
+    "yi_fixed_value": 1.0
+  },
+  "energy_parameters": {
+    "linear_coefficients": [1.0, 1.0]
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "11_hea_ml_fm",
+    "lp_filename": "hea_ml_fm.lp"
+  }
+}

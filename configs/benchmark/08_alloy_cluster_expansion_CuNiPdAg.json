@@ -1,0 +1,88 @@
+{
+  "data": {
+    "structure_file": "data/clusters/CuNiPdAg.json",
+    "property_file": "data/clusters/CuNiPdAg.csv",
+    "prop_columns": {
+      "total_energy": "final_energy"
+    },
+    "index_column": 0,
+    "structure_slice": ":"
+  },
+  "material": {
+    "allowed_cations": [
+      "Cu",
+      "Ni",
+      "Pd",
+      "Ag"
+    ],
+    "reference_energies": {
+      "Cu": -240.11121086,
+      "Ni": -352.62417749,
+      "Pd": -333.69496589,
+      "Ag": -173.55506507
+    },
+    "reference_structure_index": 155,
+    "has_oxygen": false,
+    "oxygen_symbol": "O",
+    "atoms_per_cell": null
+  },
+  "composition": {
+    "bounds": {
+      "Cu": [
+        0,
+        null
+      ],
+      "Ni": [
+        0,
+        null
+      ],
+      "Pd": [
+        5,
+        10
+      ],
+      "Ag": [
+        5,
+        10
+      ]
+    }
+  },
+  "cluster_expansion": {
+    "train_multiple_ce": false,
+    "cutoffs": {
+      "MixingEnergy": [
+        5,
+        5
+      ]
+    },
+    "weights": {
+      "W1": 1.0
+    },
+    "evaluate_model": true,
+    "test_size": 0.2,
+    "cv_verbosity": 1
+  },
+  "optimization": {
+    "time_limit": 360,
+    "solver": "cplex",
+    "minimize_sense": 1
+  },
+  "model_training": {
+    "lasso_cv": 5,
+    "random_state": 42,
+    "n_jobs": 8
+  },
+  "numerical": {
+    "tolerance": 1e-15,
+    "zero_mixing_energy": 0.0
+  },
+  "constraint_parameters": {
+    "fixed_values": {
+      "occupied": 1.0,
+      "unoccupied": 0.0
+    }
+  },
+  "output": {
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "08_alloy_cluster_expansion"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "material": {
+    "iad": 1.0,
+    "atom1": "Cu",
+    "atom2": "Ag",
+    "comp_bounds_cu": [3, 3],
+    "comp_bounds_ag": [3, 3]
+  },
+  "geometry": {
+    "n_atoms": 6,
+    "initial_location": [0.0, 0.0, 0.0],
+    "n_shells_monometallic": 1
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit_monometallic": 100,
+    "time_limit_bimetallic": 360,
+    "memory_limit": 4096,
+    "maximize_sense": -1
+  },
+  "energy_parameters": {
+    "coordination_number_min": 0,
+    "coordination_number_max": 12,
+    "coordination_range": 13,
+    "cnri_lower_bound": 0,
+    "ecoh_normalization_factor": 1.0,
+    "yi_fixed_value": 1.0,
+    "gkl_coefs": {
+      "Cu_Cu": 3.520,
+      "Cu_Ag": 2.112,
+      "Ag_Ag": 2.580,
+      "Ag_Cu": 3.612
+    }
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "02_nanocluster_bimetal",
+    "lp_filename_monometallic": "nanocluster_monometallic.lp",
+    "lp_filename_bimetallic": "nanocluster_bimetallic.lp"
+  },
+  "misc": {
+    "core_ratio": 0.2
+  }
+}

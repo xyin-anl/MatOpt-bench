@@ -1,0 +1,110 @@
+{
+  "material": {
+    "iad": 1.0,
+    "atom1": "Cu",
+    "atom2": "Ag",
+    "comp_bounds_cu": [
+      3,
+      3
+    ],
+    "comp_bounds_ag": [
+      3,
+      3
+    ],
+    "elements": [
+      "Cu",
+      "Ag"
+    ],
+    "composition_bounds": {
+      "Cu": [
+        3,
+        3
+      ],
+      "Ag": [
+        3,
+        3
+      ]
+    },
+    "inter_atomic_distance": 1.0
+  },
+  "geometry": {
+    "n_atoms": 6,
+    "initial_location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_shells_monometallic": 1,
+    "cluster_size": 13,
+    "n_shells": 2
+  },
+  "optimization": {
+    "solver": "cplex",
+    "time_limit_monometallic": 100,
+    "time_limit_bimetallic": 360,
+    "memory_limit": 4096,
+    "maximize_sense": -1,
+    "monometallic_time_limit": 100,
+    "bimetallic_time_limit": 360,
+    "tree_memory_limit": 4096,
+    "mip_gap": null
+  },
+  "energy_parameters": {
+    "coordination_number_min": 0,
+    "coordination_number_max": 12,
+    "coordination_range": 13,
+    "cnri_lower_bound": 0,
+    "ecoh_normalization_factor": 1.0,
+    "yi_fixed_value": 1.0,
+    "gkl_coefs": {
+      "Cu_Cu": 3.52,
+      "Cu_Ag": 2.112,
+      "Ag_Ag": 2.58,
+      "Ag_Cu": 3.612
+    },
+    "Gkl_coefficients": {
+      "Cu": {
+        "Cu": [
+          -0.52,
+          0.025,
+          2.9,
+          2.25,
+          0.405
+        ],
+        "Ag": [
+          -0.414,
+          0.022,
+          2.9,
+          2.29,
+          0.39
+        ]
+      },
+      "Ag": {
+        "Cu": [
+          -0.414,
+          0.022,
+          2.9,
+          2.29,
+          0.39
+        ],
+        "Ag": [
+          -0.336,
+          0.02,
+          2.95,
+          2.35,
+          0.38
+        ]
+      }
+    }
+  },
+  "output": {
+    "lp_export": false,
+    "lp_export_dir": "lp_files",
+    "lp_file_prefix": "02_nanocluster_bimetal",
+    "lp_filename_monometallic": "nanocluster_monometallic.lp",
+    "lp_filename_bimetallic": "nanocluster_bimetallic.lp"
+  },
+  "misc": {
+    "core_ratio": 0.2
+  }
+}
