@@ -23,19 +23,19 @@ MatOpt-bench/
 
 ### Categorization Table
 
-| Category | Example | Material System | Design Space | Optimization Type | Key Features |
-|----------|---------|-----------------|--------------|-------------------|--------------|
-| **Nanoclusters** | `01_nanocluster_mono` | Configurable (default: Pt) | FCC lattice sites | MILP | Square-root cohesive energy, piecewise linear |
-| | `02_nanocluster_bimetal` | Configurable (default: Cu-Ag) | Composition & structure | MILP | Two-step optimization, Gupta potentials |
-| **Surfaces** | `03_surface_design` | Configurable metal | Surface atom positions | MILP | GCN descriptor, activity-stability trade-off |
-| | `04_surface_bifunctional` | Pt-Ni catalyst | 7 predefined motifs | MILP | Configuration-based bifunctional design |
-| **Bulk Materials** | `05_bulk_oxide_vacancy` | Ba(Fe,In)O₃ | Oxygen vacancy configs | MILP | Local/global doping constraints |
-| | `06_crystal_ionic` | 5 crystal types | Ion positions | MILP | Ewald summation, space group orbits |
-| **Nanowires** | `07_nanowire_design` | InAs wurtzite | Core-shell structure | MILP | Cylindrical geometry, 20% core constraint |
-| **Alloys & Solutions** | `08_alloy_cluster_expansion` | Ru/Zr/CuNiPdAg | Composition space | MILP | ML cluster expansion, multi-property |
-| | `09_solid_solution_qubo` | Graphene/AlGaN/Ta-W | Binary substitutions | MILP/QUBO | Quantum annealing ready, chemical potential |
-| **ML-Enhanced** | `10_crystal_ml_fm` | Crystal structures | Bit-string encoding | MILP/QUBO | CRYSIM factorization machine |
-| | `11_hea_ml_fm` | Configurable HEA | BCC supercell | MILP/QUBO | Entropy at finite T, composition limits |
+| Category | Example | Material System | Design Space | Key Features |
+|----------|---------|-----------------|--------------|--------------|
+| **Nanoclusters** | `01_nanocluster_mono` | Configurable (default: Pt) | FCC lattice sites | Square-root cohesive energy, piecewise linear |
+| | `02_nanocluster_bimetal` | Configurable (default: Cu-Ag) | Composition & structure | Two-step optimization, Gupta potentials |
+| **Surfaces** | `03_surface_design` | Configurable metal | Surface atom positions | GCN descriptor, activity-stability trade-off |
+| | `04_surface_bifunctional` | Pt-Ni catalyst | 7 predefined motifs | Configuration-based bifunctional design |
+| **Bulk Materials** | `05_bulk_oxide_vacancy` | Ba(Fe,In)O₃ | Oxygen vacancy configs | Local/global doping constraints |
+| | `06_crystal_ionic` | 5 crystal types | Ion positions | Ewald summation, space group orbits |
+| **Nanowires** | `07_nanowire_design` | InAs wurtzite | Core-shell structure | Cylindrical geometry, 20% core constraint |
+| **Alloys & Solutions** | `08_alloy_cluster_expansion` | Ru/Zr/CuNiPdAg | Composition space | ML cluster expansion, multi-property |
+| | `09_solid_solution_qubo` | Graphene/AlGaN/Ta-W | Binary substitutions | Quantum annealing ready, chemical potential |
+| **ML-Enhanced** | `10_crystal_ml_fm` | Crystal structures | Bit-string encoding | CRYSIM factorization machine |
+| | `11_hea_ml_fm` | Configurable HEA | BCC supercell | Entropy at finite T, composition limits |
 
 ## Detailed Example Descriptions
 
